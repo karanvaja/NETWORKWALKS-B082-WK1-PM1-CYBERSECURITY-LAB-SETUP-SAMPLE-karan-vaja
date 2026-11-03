@@ -17,24 +17,24 @@ Test and troubleshoot network connectivity.
 Take a clean snapshot of the working machine.
 
 ⚙️ 3. Lab Configuration
-Component                     	Details
-Host System	                    Windows 11
-Hypervisor	                    VirtualBox 7.2
-Guest OS	                    Kali Linux 20262
-VM RAM	                        2048 MB
-Network Type                	NAT Network
-Subnet	                        10.0.0.0/24
-Kali IP Address	                10.0.0.2 (Static)
-Gateway	                        10.0.0.1
-DNS Server	                    8.8.8.8
-
+| Component       | Details             |
+|-----------------|---------------------|
+| Host System     | Windows 11          |
+| Hypervisor      | VirtualBox 7.2      |
+| Guest OS        | Kali Linux 20262    |
+| VM RAM          | 2048 MB             |
+| Network Type    | NAT Network         |
+| Subnet          | 10.0.0.0/24         |
+| Kali IP Address | 10.0.0.2 (Static)   |
+| Gateway         | 10.0.0.1            |
+| DNS Server      | 8.8.8.8             |
 
 🚀 4. Setup Process
 Step 1: VirtualBox NAT Network Configuration
 A dedicated NAT Network was created to ensure that multiple VMs can communicate with each other while still having internet access. This is essential for a multi-machine lab.
 
 
-`![](2-screenshot network settings 1.png)`
+![](\image\2-screenshot network settings 1.png)
 
 Step 2: Kali Linux VM Settings
 The Kali Linux VM was imported, and its network adapter was attached to the "NatNetwork".
