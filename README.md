@@ -40,8 +40,8 @@ A dedicated NAT Network was created to ensure that multiple VMs can communicate 
 Step 2: Kali Linux VM Settings
 The Kali Linux VM was imported, and its network adapter was attached to the "NatNetwork".
 
+![](image/vm-network-adapter.png)
 
-`![](vm-network-adapter.png)`
 
 Step 3: Static IP Configuration
 Inside Kali Linux, the IPv4 settings were manually configured to use a static IP. This ensures the machine is always reachable at 10.0.0.2.
@@ -52,7 +52,7 @@ Step 4: Taking a Baseline Snapshot
 Once the network was working, a snapshot was created named "My fresh kali linux". The description states that the IP addresses are set and the internet is working fine. This serves as a recovery point.
 
 
-`![](snapshot-creation.png)`
+![](image/snapshot-creation.png)
 
 🔍 5. Verification & Troubleshooting
 Network Connectivity Fix
@@ -65,7 +65,7 @@ sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
 sudo nmcli connection down "Wired connection 1"
 sudo nmcli connection up "Wired connection 1"
 
-`![](kali-terminal-fix.png)`
+![](image/kali-terminal-fix.png)
 
 Final Verification Tests
 ping 10.0.0.1 (Gateway) - Successful
@@ -80,7 +80,7 @@ The final working environment looks like this:
 
 ![](C:\Users\karan\OneDrive\Desktop\network walks\week 1\kali linux.png)
 `![ Practical ] (kali-desktop.png)`
-![](kali-desktop.png)
+![](image/kali-desktop.png)
 
 🐞 6. Other Issues Faced
 VirtualBox VT-x Error: Initially, the VM failed to start because hardware virtualization was disabled in my BIOS. I fixed this by rebooting, entering the BIOS/UEFI, enabling Intel VT-x, and saving the settings.
