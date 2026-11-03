@@ -34,6 +34,7 @@ Step 1: VirtualBox NAT Network Configuration
 A dedicated NAT Network was created to ensure that multiple VMs can communicate with each other while still having internet access. This is essential for a multi-machine lab.
 
 
+
 ![](image/2-screenshot-network-settings-1.png)
 
 Step 2: Kali Linux VM Settings
